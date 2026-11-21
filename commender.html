@@ -8,6 +8,7 @@
     <link rel="icon" href="2e2af3dd-22d3-420d-b3a7-045f84b7f4fe.png">
     <meta name="Author" content="A.chamseddine">
     <meta name="description" content="Commandez ou réservez un essai chez Showroom de Chams">
+    <script src="commande.js" defer></script>
 </head>
 <body>
     <a href="#" class="flech" title="Haut de page">↑</a>
@@ -28,7 +29,75 @@
     </header>
 
     <main>
-        
+        <form id="inscription">
+            <h2>1. Choix du véhicule</h2>
+            <div class="ligne">
+                <div class="champ">
+                    <label>Modèle souhaité <span>*</span></label>
+                    <select required>
+                        <option value="">-- Sélectionnez un modèle --</option>
+                        <option value="clio">clio compus (8 000 DT)</option>
+                        <option value="passt cc">passat cc (51 000 DT)</option>
+                        <option value="ibiza">ibiza(42 000 DT)</option>
+                        <option value="golf7">golf7(75 000 DT)</option>
+                        <option value="amrok">amrok(71 000 DT)</option>
+                        <option value="passat b8">passat b8(72 000 DT)</option>
+                        <option value="autre">Autre modèle sur commande</option>
+                    </select>
+                </div>
+
+                <div class="champ">
+                    <label>Type de demande <span>*</span></label>
+                    <select required>
+                        <option value="achat">Achat comptant</option>
+                        <option value="leasing">Financement / Leasing</option>
+                        <option value="essai">Réserver un essai gratuit</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="ligne">
+                <div class="champ">
+                    <label>Couleur préférée</label>
+                    <select>
+                        <option value="noir">Noir Obsidienne</option>
+                        <option value="blanc">Blanc Polaire</option>
+                        <option value="gris">Gris Sélénite</option>
+                        <option value="or">Or / Champagne</option>
+                    </select>
+                </div>
+
+                <div class="champ">
+                    <label>Date souhaitée de rendez-vous</label>
+                    <input type="date">
+                </div>
+            </div>
+
+            <h2>2. Vos coordonnées</h2>
+            <div class="ligne">
+                <div class="champ">
+                    <label>Nom complet <span>*</span></label>
+                    <input type="text" placeholder="Ex: Ahmed chamseddine" required>
+                </div>
+
+                <div class="champ">
+                    <label>Téléphone <span>*</span></label>
+                    <input type="tel" placeholder="+216 XX XXX XXX" required>
+                </div>
+            </div>
+
+            <div class="champ">
+                <label>Remarques ou options supplémentaires</label>
+                <textarea placeholder="Précisez vos besoins (reprise d'ancien véhicule, options intérieures...)"></textarea>
+            </div>
+
+            <p class="obligatoire">* Champs obligatoires</p>
+
+            <div class="boutons">
+                <input type="reset" value="Effacer" class="reset">
+                <input type="submit" value="Envoyer ma commande" class="submit">
+            </div>
+        </form>
     </main>
 
     <footer>

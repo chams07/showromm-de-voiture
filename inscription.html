@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHOWROOM DE CHAMS</title>
+    <title>inscriver vous —SHOWROOM DE CHAMS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="2e2af3dd-22d3-420d-b3a7-045f84b7f4fe.png">
     <meta name="Author" content="A.chamseddine">
     <script src="commande.js" defer></script>
 </head>
 <body>
-    <a href="#sommaire" class="flech">↑</a>
+    <a href="#" class="flech" title="Haut de page">↑</a>
     <header>
         <h1>SHOWROOM DE CHAMS</h1>
     </header>
@@ -24,7 +24,7 @@
         </ul>
     </nav>
     
-    <form id="inscription">
+    <form id="inscription" onsubmit="validerInscription(event)">
         <div class="ligne">
             <div class="champ">
                 <label for="prenom">Prénom </label>
@@ -40,12 +40,13 @@
         <div class="ligne">
             <div class="champ">
                 <label for="telephone">Téléphone</label>
-                <input type="tel" id="telephone" name="telephone">
+                <input type="tel" id="telephone" name="telephone" pattern="[2459][0-9]{7}"
+                title="8 chiffres (2, 4, 5 ou 9 en tête)">
             </div>
 
             <div class="champ">
                 <label for="email">Email </label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" minlength="8" required>
             </div>
         </div>
 

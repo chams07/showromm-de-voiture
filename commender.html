@@ -29,12 +29,12 @@
     </header>
 
     <main>
-        <form id="inscription">
+        <form id="commande-form" onsubmit="validerCommande(event) ">
             <h2>1. Choix du véhicule</h2>
             <div class="ligne">
                 <div class="champ">
-                    <label>Modèle souhaité <span>*</span></label>
-                    <select required>
+                    <label for="modele">Modèle souhaité </label>
+                    <select id="modele" name="modele" required>
                         <option value="">-- Sélectionnez un modèle --</option>
                         <option value="clio">clio compus (8 000 DT)</option>
                         <option value="passt cc">passat cc (51 000 DT)</option>
@@ -47,8 +47,8 @@
                 </div>
 
                 <div class="champ">
-                    <label>Type de demande <span>*</span></label>
-                    <select required>
+                    <label for="type_demande">Type de demande </label>
+                    <select id="type_demande" name="type_demande" required>
                         <option value="achat">Achat comptant</option>
                         <option value="leasing">Financement / Leasing</option>
                         <option value="essai">Réserver un essai gratuit</option>
@@ -58,8 +58,8 @@
 
             <div class="ligne">
                 <div class="champ">
-                    <label>Couleur préférée</label>
-                    <select>
+                    <label for="couleur">Couleur préférée</label>
+                    <select id="couleur" name="couleur">
                         <option value="noir">Noir Obsidienne</option>
                         <option value="blanc">Blanc Polaire</option>
                         <option value="gris">Gris Sélénite</option>
@@ -68,34 +68,32 @@
                 </div>
 
                 <div class="champ">
-                    <label>Date souhaitée de rendez-vous</label>
-                    <input type="date">
+                    <label for="date_rdv">Date souhaitée de rendez-vous</label>
+                    <input type="date" id="date_rdv" name="date_rdv">
                 </div>
             </div>
 
             <h2>2. Vos coordonnées</h2>
             <div class="ligne">
                 <div class="champ">
-                    <label>Nom complet <span>*</span></label>
-                    <input type="text" placeholder="Ex: Ahmed chamseddine" required>
+                    <label for="nom_complet">Nom complet </label>
+                    <input type="text" id="nom_complet" name="nom_complet" placeholder="Ex: Ahmed chamseddine" required>
                 </div>
 
                 <div class="champ">
-                    <label>Téléphone <span>*</span></label>
-                    <input type="tel" placeholder="+216 XX XXX XXX" required>
+                    <label for="telephone_commande">Téléphone </label>
+                    <input type="tel" id="telephone_commande" name="telephone_commande" placeholder="+216 XX XXX XXX" required>
                 </div>
             </div>
 
             <div class="champ">
-                <label>Remarques ou options supplémentaires</label>
-                <textarea placeholder="Précisez vos besoins (reprise d'ancien véhicule, options intérieures...)"></textarea>
+                <label for="remarques">Remarques ou options supplémentaires</label>
+                <textarea id="remarques" name="remarques" placeholder="Précisez vos besoins (reprise d'ancien véhicule, options intérieures...)"></textarea>
             </div>
 
-            <p class="obligatoire">* Champs obligatoires</p>
-
             <div class="boutons">
-                <input type="reset" value="Effacer" class="reset">
-                <input type="submit" value="Envoyer ma commande" class="submit">
+                <input type="reset" id="btn-reset-commande" name="reset_commande" value="Effacer" class="reset">
+                <input type="submit" id="btn-submit-commande" name="submit_commande" value="Envoyer ma commande" class="submit">
             </div>
         </form>
     </main>
